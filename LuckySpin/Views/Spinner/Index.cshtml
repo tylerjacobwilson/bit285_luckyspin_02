@@ -1,0 +1,25 @@
+﻿@model LuckySpin.Models.Spin 
+
+@{
+    //Notice this View requires a Spin object as it's model
+    //TODO: DIJ Part 2: Inject the TextTransform Service into the View above as variable TT
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lucky Spin</title>
+    <link rel="stylesheet" href="/css/luckyStyles.css">
+</head>
+<body>
+
+ <!-- //TODO: Use the DIJ TT.numberToText() along with a Model's luck value to display the lucky number as a word -->
+    <h1> Lucky Number </h1>
+    <button onclick='history.go(0)'>Spin</button>
+ <!-- //TODO: Use Model values in the appropriate places in this template  -->
+    <div>2</div><div>7</div><div>9</div>
+    <img src="/Images/LuckySpinCoins.jpg" alt="Coins" style="display:block" />
+</body>
+</html>
+
