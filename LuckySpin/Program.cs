@@ -1,12 +1,16 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿
+using LuckySpin.Models;
+
+var builder = WebApplication.CreateBuilder(args);
 
 /* Install Services using the builder.Services methods
  */
 
-//TODO: use the AddMvc method to enable MVC for this application
+//use the AddMvc method to enable MVC for this application
+builder.Services.AddMvc();
+builder.Services.AddTransient<TextTransform>();
 
-
-//TODO: DIJ Part 1: Register the TextTranform class as available for DIJ
+//DIJ Part 1: Register the TextTranform class as available for DIJ
 
 
 var app = builder.Build();
@@ -28,6 +32,6 @@ app.MapControllerRoute(
         action = "Index",
         luck = 7
     });
-
+ 
 app.Run();
 
